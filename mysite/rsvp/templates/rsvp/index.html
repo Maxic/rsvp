@@ -1,0 +1,80 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Teken estafette, Allie van Altena</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" type="text/css" href="{% static 'css/normalize.css' %}" />
+  <link rel="stylesheet" type="text/css" href="{% static 'css/skeleton.css' %}" />
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="{% static 'images/favicon.png' %}">
+
+</head>
+<body>
+
+  <!-- Primary Page Layout
+  ––––––––––––––––––––––––––––––––––––––––––––––––––-->
+  <div class="container">
+    <div class="row">
+      <div class="one-half column" style="margin-top: 25%">
+        <h4>Welcome</h4>
+        <p>Sign up here for the thingemajig</a>.</p>
+        <form method="post">
+          {% csrf_token %}
+          <div class="row">
+            <div class="six columns">
+              <label for="nameInput">Name</label>
+              {{form.name}}
+            </div>
+            <div class="six columns">
+              <label for="exampleRecipientInput">Who are you</label>
+              {{form.role}}
+            </div>
+          </div>
+          <div class="row">
+            <div class="six columns">
+              <label for="exampleEmailInput">Email address</label>
+              {{form.email}}
+            </div>
+            <div class="six columns">
+              <label for="exampleRecipientInput">Website address</label>
+              {{form.websiteAddress}}
+            </div>
+          </div>
+          <div class="row">
+          <div class="twelve columns">
+            <label for="exampleMessage">Additional message</label>
+            {{form.additionalMessage}}
+            <input class="button" type="submit" value="Submit">
+          </div>
+        </div>
+        </div>
+        </form>
+      </div>
+      </div>
+    </div>
+  </div>
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>
