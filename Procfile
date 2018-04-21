@@ -1,1 +1,1 @@
-web: gunicorn rsvp.wsgi --log-file -
+web: gunicorn mysite.wsgi
