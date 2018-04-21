@@ -1,1 +1,1 @@
-# rsvp
+Simple RSVP app for a Drawing Estafette for Allie van Altena. 

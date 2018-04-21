@@ -1,1 +1,1 @@
-web: gunicorn mysite.rsvp.wsgi
+web: gunicorn gettingstarted.wsgi

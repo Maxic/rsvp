@@ -15,13 +15,5 @@ def add_model(request):
     else:
 
         form = Attendeeform()
-        return render(request, "rsvp/index.html", {'form': form})
+        return render(request, "index.html", {'form': form})
 
-
-class IndexView(generic.ListView):
-    template_name = 'rsvp/index.html'
-    context_object_name = 'attendees'
-
-    def get_queryset(self):
-        """Return the last five published questions."""
-        return Attendee.objects.all()
