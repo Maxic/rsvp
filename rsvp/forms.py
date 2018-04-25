@@ -18,10 +18,3 @@ class Attendeeform(ModelForm):
                     'artwork3SizeH': forms.TextInput(attrs={'size': 8}),
                     'artwork3SizeW': forms.TextInput(attrs={'size': 8}),
                     }
-
-
-#class Artworkform(ModelForm):
-#    class Meta:
-#        mddel = Artwork
-#        fields = ['title', 'size', 'price']
-

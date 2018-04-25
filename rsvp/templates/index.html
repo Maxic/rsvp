@@ -36,8 +36,8 @@
   <div class="container">
     <div class="row">
       <div class="12 columns" style="margin-top: 25%">
-        <h2>Welcome</h2>
-        <p>The Drawing Estafette and the Allie van Altena Minerva Farewell Exhibition
+        <h3>The Drawing Estafette and the Allie van Altena Minerva Farewell Exhibition</h3>
+        <p>
           The Drawing Estafette is a project to pass on ideas, skills and knowledge by using drawing materials.
           The project consists of two parts: the creation of an estafette-drawing by the participants during one
           day of working and/or the bringing in of some (already made) finished drawings.
@@ -46,9 +46,11 @@
           Academy Minerva Zuiderdiep in the first week of September 2018.
         </p>
         <p>
-          The One-Day-Drawing-Estafette will be held on <b>Friday the 7th of September</b> prior to the joined
+          The One-Day-Drawing-Estafette will be held on <b>Friday the 14th of September</b> prior to the joined
           opening event of the Farewell Exhibition and the Drawing Estafette. The online submitted drawings
-          must be delivered at Academie Minerva between 20th and 24th of August.
+          must be delivered at Academie Minerva between <b>20th and 24th of August</b>.
+        </p>
+        <p>
           The Drawing Estafette is an ideal project for both students, beginner artist practitioners and
           everyone else who believes in the power of drawing.
         </p>
@@ -63,27 +65,27 @@
           {% csrf_token %}
           <div class="row">
             <div class="six columns">
-              <label for="nameInput">Name</label>
+              <label for="nameInput">Name*</label>
               {{form.name}}
             </div>
             <div class="six columns">
-              <label for="exampleRecipientInput">Who are you</label>
+              <label for="exampleRecipientInput">Who are you*</label>
               {{form.role}}
             </div>
           </div>
           <div class="row">
             <div class="six columns">
-              <label for="exampleEmailInput">Email address</label>
+              <label for="exampleEmailInput">Email address*</label>
               {{form.email}}
             </div>
             <div class="six columns">
-              <label for="exampleRecipientInput">Website address</label>
+              <label for="exampleRecipientInput">Website address*</label>
               {{form.websiteAddress}}
             </div>
           </div>
           <div class="row">
           <div class="twelve columns">
-            <label for="takePartInput">Do you want to take part in the Drawing Estafette on the day of the opening?</label>
+            <label for="takePartInput">Do you want to take part in the Drawing Estafette on the day of the opening?*</label>
             <div align="left">
               {{form.takePart}}
             </div>

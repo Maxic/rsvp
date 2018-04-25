@@ -13,14 +13,6 @@ TAKEPART_CHOICES = (
     ('No', 'No'),
 )
 
-SIZE_CHOICES = (
-    ('A4','A4'),
-    ('A3','A3'),
-    ('A2','A2'),
-    ('A1','A1'),
-    ('A0','A0'),
-)
-
 
 class Attendee(models.Model):
     name = models.CharField(max_length=50)
@@ -41,11 +33,3 @@ class Attendee(models.Model):
     artwork3SizeH = models.IntegerField(blank=True, null=True)
     artwork3SizeW = models.IntegerField(blank=True, null=True)
     artwork3Price = models.DecimalField(decimal_places=2, max_digits=6, default=0, blank=True)
-
-
-
-#class Artwork(models.Model):
-#    title = models.CharField(max_length=100)
-#    size = models.CharField(max_length=20, choices=SIZE_CHOICES, default='A4')
-#    price = models.IntegerField()
-#    Attendee = models.ForeignKey(Attendee, on_delete=models.CASCADE)
