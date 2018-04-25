@@ -35,10 +35,31 @@
   ––––––––––––––––––––––––––––––––––––––––––––––––––-->
   <div class="container">
     <div class="row">
-      <div class="one-half column" style="margin-top: 25%">
-        <h4>Welcome</h4>
-        <p>Sign up here for the thingemajig</a>.</p>
-        <form method="post">
+      <div class="12 columns" style="margin-top: 25%">
+        <h2>Welcome</h2>
+        <p>The Drawing Estafette and the Allie van Altena Minerva Farewell Exhibition
+          The Drawing Estafette is a project to pass on ideas, skills and knowledge by using drawing materials.
+          The project consists of two parts: the creation of an estafette-drawing by the participants during one
+          day of working and/or the bringing in of some (already made) finished drawings.
+          Both (all) the submitted drawings and the One-Day- Estafette-Drawing will be presented together
+          with the Allie van Altena Minerva Farewell Exhibition. This will take place in the central hall of
+          Academy Minerva Zuiderdiep in the first week of September 2018.
+        </p>
+        <p>
+          The One-Day-Drawing-Estafette will be held on <b>Friday the 7th of September</b> prior to the joined
+          opening event of the Farewell Exhibition and the Drawing Estafette. The online submitted drawings
+          must be delivered at Academie Minerva between 20th and 24th of August.
+          The Drawing Estafette is an ideal project for both students, beginner artist practitioners and
+          everyone else who believes in the power of drawing.
+        </p>
+        <p>
+          If you wish to participate, please sign up below.
+        </p>
+      </div>
+    </div>
+    <form method="post">
+    <div class="row">
+      <div class="one-half column">
           {% csrf_token %}
           <div class="row">
             <div class="six columns">
@@ -62,7 +83,7 @@
           </div>
           <div class="row">
           <div class="twelve columns">
-            <label for="takePartInput">Do you want to take part in a drawing relay on the day of the opening?</label>
+            <label for="takePartInput">Do you want to take part in the Drawing Estafette on the day of the opening?</label>
             <div align="left">
               {{form.takePart}}
             </div>
@@ -71,14 +92,49 @@
           <div class="twelve columns">
             <label for="exampleMessage">Additional message</label>
             {{form.additionalMessage}}
-            <input class="button" type="submit" value="Submit">
           </div>
         </div>
         </div>
-        </form>
-      </div>
       </div>
     </div>
+      <h5>Artwork</h5>
+      <div class="row">
+        <div class="four columns">
+          <label for="artwork1Title">Title</label>
+          {{form.artwork1Title}}
+          <label for="artwork1Size">Size (Height x Width)</label>
+          <div class="row">
+            {{form.artwork1SizeH}}
+            {{form.artwork1SizeW}}
+          </div>
+          <label for="artwork1Price">Price in €</label>
+          {{form.artwork1Price}}
+        </div>
+        <div class="four columns">
+          <label for="artwork2Title">Title</label>
+          {{form.artwork2Title}}
+          <label for="artwork2Size">Size (Height x Width)</label>
+          <div class="row">
+            {{form.artwork2SizeH}}
+            {{form.artwork2SizeW}}
+          </div>
+          <label for="artwork2Price">Price in €</label>
+          {{form.artwork2Price}}
+        </div>
+        <div class="four columns">
+          <label for="artwork3Title">Title</label>
+          {{form.artwork3Title}}
+          <label for="artwork3Size">Size (Height x Width)</label>
+          <div class="row">
+            {{form.artwork3SizeH}}
+            {{form.artwork3SizeW}}
+          </div>
+          <label for="artwork3Price">Price in €</label>
+          {{form.artwork3Price}}
+        </div>
+      </div>
+      <input class="button" type="submit" value="Submit">
+    </form>
   </div>
 
 <!-- End Document
