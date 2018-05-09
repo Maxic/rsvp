@@ -2,8 +2,8 @@ from django.db import models
 
 
 ROLE_CHOICES = (
-    ('Bachelorstudent','Bachelorstudent'),
-    ('Masterstudent', 'Masterstudent'),
+    ('Bachelorstudent','Bachelor student'),
+    ('Masterstudent', 'Master student'),
     ('Alumnus','Alumnus'),
     ('Other','Other'),
 )
@@ -24,12 +24,12 @@ class Attendee(models.Model):
     artwork1Title = models.CharField(max_length=100, blank=True)
     artwork1SizeH = models.IntegerField(blank=True, null=True)
     artwork1SizeW = models.IntegerField(blank=True, null=True)
-    artwork1Price = models.DecimalField(decimal_places=2, max_digits=6, null=True, blank=True)
+    artwork1Price = models.DecimalField(decimal_places=0, max_digits=6, null=True, blank=True)
     artwork2Title = models.CharField(max_length=100, blank=True)
     artwork2SizeH = models.IntegerField(blank=True, null=True)
     artwork2SizeW = models.IntegerField(blank=True, null=True)
-    artwork2Price = models.DecimalField(decimal_places=2, max_digits=6, null=True, blank=True)
+    artwork2Price = models.DecimalField(decimal_places=0, max_digits=6, null=True, blank=True)
     artwork3Title = models.CharField(max_length=100, blank=True)
     artwork3SizeH = models.IntegerField(blank=True, null=True)
     artwork3SizeW = models.IntegerField(blank=True, null=True)
-    artwork3Price = models.DecimalField(decimal_places=2, max_digits=6, null=True, blank=True)
+    artwork3Price = models.DecimalField(decimal_places=0, max_digits=6, null=True, blank=True)
