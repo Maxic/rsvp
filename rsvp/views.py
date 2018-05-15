@@ -11,12 +11,13 @@ def add_attendee(request):
         if form.is_valid():
             model_instance = form.save(commit=False)
             model_instance.save()
-            return redirect('/rsvp/thanks')
+            return redirect('/rsvp/thanks/?p=%s' % model_instance.id)
     else:
         form = Attendeeform()
         return render(request, "index.html", {'form': form})
 
 
 def thanks(request):
-    template = loader.get_template("thanks.html")
-    return HttpResponse(template.render())
+    data = request.GET
+    value = data['p']
+    return render(request, "thanks.html", {'data': value})
